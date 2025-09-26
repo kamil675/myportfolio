@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const Video = () => {
   return (
-    <div className='h-full w-full'>
-        <video className='h-full w-full object-cover' autoPlay loop muted src="../../../public/video.mp4"></video>
-    </div>
-  )
-}
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="h-full w-full object-cover"
+    >
+      <source src="/portfolio.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  );
+};
 
-export default Video
+export default Video;
