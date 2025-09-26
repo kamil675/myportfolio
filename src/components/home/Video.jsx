@@ -9,7 +9,7 @@ const Video = () => {
       playsInline
       className="h-full w-full object-cover"
     >
-      <source src="/portfolio.mp4" type="video/mp4" />
+      <source src="/Video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   );
