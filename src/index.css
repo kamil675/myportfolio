@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: font1;
+  src: url(../public/fonts/Lausanne-300.woff2);
+}
+@font-face {
+  font-family: font2;
+  src: url(../public/fonts/Lausanne-500.woff2);
+}
+
+.moveX {
+  animation-name: moveAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.moveLink {
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+
+.link:hover .moveLink {
+  opacity: 1;
+}
+
+@keyframes moveAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.flip-animation {
+  animation: flip 6s linear infinite;
+  transform-style: preserve-3d;
+}
+/* Gradient move animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradientMotion {
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+}
+
+/* Floating text animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Slab:wght@700&display=swap");
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-robotoslab {
+  font-family: "Roboto Slab", serif;
+}
