@@ -23,15 +23,16 @@ const HomeHeroText = () => {
     <div className="relative w-full h-screen overflow-hidden">
       {/* Fullscreen Background Video */}
       <video
-        src="/path-to-your-background-video.mp4" // <-- replace with your video path
+        src="/video.mp4" // ✅ public folder me jo file hai uska direct path
         autoPlay
         loop
         muted
+        playsInline // ✅ iOS Safari ke liye zaroori
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
 
       {/* Overlay content */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center bg-black/40">
         {/* Animated Hero Text */}
         <div
           className="lg:text-[9.5vw] text-[12vw] uppercase lg:leading-[8vw] leading-[10vw] font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 drop-shadow-2xl font-poppins animate-gradientMotion"
