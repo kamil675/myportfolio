@@ -34,7 +34,7 @@ const HomeBottomText = () => {
       {buttons.map((text, index) => (
         <div
           key={index}
-          className={`group relative overflow-hidden lg:border-3 border-2 border-white rounded-full h-12 lg:h-44 flex items-center 
+          className={`group relative overflow-hidden lg:border-3 border-2 border-white rounded-full h-12 lg:h-30 flex items-center 
                       px-4 lg:px-16 uppercase tracking-widest
                       transition-all duration-500 ease-in-out
                       transform
