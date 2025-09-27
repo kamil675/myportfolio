@@ -200,12 +200,13 @@ const Agence = () => {
       </div>
 
       {/* Page 2 - Skills Section */}
+      {/* Page 2 - Skills Section */}
       <div
         id="page2"
-        className="h-screen flex items-center justify-center overflow-hidden top-0"
+        className="min-h-screen flex items-start md:items-center justify-center pt-6 md:pt-0 relative"
         style={{
           background: `radial-gradient(circle at top left, #0ff, #06b, #000),
-                       linear-gradient(135deg, #1e293b, #0f172a)`,
+                 linear-gradient(135deg, #1e293b, #0f172a)`,
         }}
       >
         {/* Floating background glow */}
