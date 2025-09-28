@@ -1,30 +1,25 @@
 @import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Slab:wght@700&display=swap");
 
-
 @font-face {
   font-family: font1;
-  src: url(../public/fonts/Lausanne-300.woff2);
+  src: url("/fonts/Lausanne-300.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
 }
 @font-face {
   font-family: font2;
-  src: url(../public/fonts/Lausanne-500.woff2);
+  src: url("/fonts/Lausanne-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
 }
 
+/* MoveX Animation */
 .moveX {
   animation-name: moveAnimation;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-}
-
-.moveLink {
-  opacity: 0;
-  transition: all ease 0.3s;
-}
-
-.link:hover .moveLink {
-  opacity: 1;
 }
 
 @keyframes moveAnimation {
@@ -35,6 +30,17 @@
     transform: translateX(-100%);
   }
 }
+
+/* Link hover opacity */
+.moveLink {
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+.link:hover .moveLink {
+  opacity: 1;
+}
+
+/* Flip Animation */
 @keyframes flip {
   0% {
     transform: rotateY(0deg);
@@ -46,12 +52,12 @@
     transform: rotateY(360deg);
   }
 }
-
 .flip-animation {
   animation: flip 6s linear infinite;
   transform-style: preserve-3d;
 }
-/* Gradient move animation */
+
+/* Gradient Move Animation */
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -63,13 +69,12 @@
     background-position: 0% 50%;
   }
 }
-
 .animate-gradientMotion {
   background-size: 200% 200%;
   animation: gradientShift 5s ease infinite;
 }
 
-/* Floating text animation */
+/* Floating Text Animation */
 @keyframes float {
   0%,
   100% {
@@ -79,7 +84,6 @@
     transform: translateY(-10px);
   }
 }
-
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -87,7 +91,6 @@
 .font-poppins {
   font-family: "Poppins", sans-serif;
 }
-
 .font-robotoslab {
   font-family: "Roboto Slab", serif;
 }
