@@ -75,7 +75,7 @@ const Projects = () => {
   });
 
   return (
-    <div className="lg:p-8 md:p-6 p-4 mb-[100vh]">
+    <div className="lg:p-8 md:p-6 p-4 mb-[1vh]">
       {/* Heading */}
       <div className="pt-[20vh] md:pt-[30vh] lg:pt-[40vh] text-center">
         <h2
