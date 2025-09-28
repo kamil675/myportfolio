@@ -41,7 +41,7 @@ const HomeHeroText = () => {
           className={`rounded-full overflow-hidden transition-colors duration-500 
     h-[7vw] w-[16vw] mt-[2vw]  /* margin scales with screen width */
     sm:h-[12vw] sm:w-[24vw] sm:mt-[4vw]  /* slightly bigger on small screens */
-    lg:h-[7vw] lg:w-[16vw] lg:mt-[1vw] 
+    lg:h-[7vw] lg:w-[16vw] lg:mt-[0.5vw] 
     ${developerColors[currentTextIndex]}`}
         >
           <Video />
