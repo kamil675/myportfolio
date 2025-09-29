@@ -43,35 +43,21 @@ const Projects = () => {
       },
     });
 
-    // Wave + Color animation on heading letters
+    // Wave animation on heading letters
     const letters = titleRef.current.querySelectorAll("span");
 
-    gsap.to(letters, {
-      y: -20,
-      duration: 0.8,
-      ease: "sine.inOut",
-      yoyo: true,
-      repeat: -1, // infinite wave
-      stagger: 0.15, // wave delay
-    });
-
-    gsap.to(letters, {
-      color: gsap.utils.wrap([
-        "#ff4d4d",
-        "#4dff4d",
-        "#4d4dff",
-        "#ffb84d",
-        "#ff4da6",
-        "#00e6e6",
-      ]),
-      duration: 1.5,
-      repeat: -1,
-      yoyo: true,
-      stagger: {
-        each: 0.2,
-        repeat: -1,
-      },
-    });
+    gsap.fromTo(
+      letters,
+      { y: 0 },
+      {
+        y: -20,
+        duration: 0.8,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1, // infinite wave
+        stagger: 0.15, // wave delay
+      }
+    );
   });
 
   return (
@@ -83,7 +69,10 @@ const Projects = () => {
           className="font-[font2] text-4xl sm:text-5xl md:text-6xl lg:text-[9.5vw] uppercase leading-tight flex justify-center gap-2"
         >
           {"Projets".split("").map((char, idx) => (
-            <span key={idx} className="inline-block">
+            <span
+              key={idx}
+              className="inline-block text-[#4d4dff] hover:text-[#ff4d4d] transition-colors duration-300"
+            >
               {char}
             </span>
           ))}
