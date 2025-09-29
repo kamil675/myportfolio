@@ -1,6 +1,9 @@
-@import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Slab:wght@700&display=swap");
+@charset "UTF-8";
 
+@import "tailwindcss";
+/* ---------------------------
+   Custom Fonts
+---------------------------- */
 @font-face {
   font-family: font1;
   src: url("/fonts/Lausanne-300.woff2") format("woff2");
@@ -14,7 +17,6 @@
   font-style: normal;
 }
 
-/* MoveX Animation */
 .moveX {
   animation-name: moveAnimation;
   animation-duration: 10s;
@@ -31,7 +33,6 @@
   }
 }
 
-/* Link hover opacity */
 .moveLink {
   opacity: 0;
   transition: all ease 0.3s;
@@ -40,7 +41,6 @@
   opacity: 1;
 }
 
-/* Flip Animation */
 @keyframes flip {
   0% {
     transform: rotateY(0deg);
@@ -57,7 +57,6 @@
   transform-style: preserve-3d;
 }
 
-/* Gradient Move Animation */
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -74,7 +73,6 @@
   animation: gradientShift 5s ease infinite;
 }
 
-/* Floating Text Animation */
 @keyframes float {
   0%,
   100% {
